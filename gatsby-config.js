@@ -1,12 +1,13 @@
+const siteUrl = process.env.URL || `https://hexcaliber.dev`
+
 module.exports = {
   siteMetadata: {
-    title: "Hexcaliber.dev",
+    title: "Hexcaliber Interactive",
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
