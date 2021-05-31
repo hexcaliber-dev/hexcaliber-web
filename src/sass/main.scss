@@ -3,6 +3,10 @@
 //  CREATED BY BEN CUAN
 //////////////////////////////////////////
 
+@use '_colors';
+$hamburger-layer-color: white;
+@import 'hamburgers/hamburgers.scss';
+
 @mixin screen($size) {
     $desktop: "(min-width: 1024px)";
     $tablet: "(min-width: 768px) and (max-width: 1023px)";
@@ -42,7 +46,7 @@ html, body {
 }
 
 .main {
-    background-color: #1F2633;
+    background-color: colors.$background;
     min-height: 100vh;
     min-width: 100vw;
     max-height: 100vh;
@@ -105,14 +109,14 @@ html, body {
     .home-button {
         border: solid white 3px;
         border-radius: 50%;
-        height: 4.5rem;
-        width: 4.5rem;
+        height: 5rem;
+        width: 5rem;
         transition: all 0.25s ease-out;
         background-color: transparent;
         color: white;
 
         &:hover {
-            transform: scale(1.5);
+            transform: scale(1.3);
             background-color: white;
             color: black;
         }
@@ -124,18 +128,24 @@ html, body {
 
     @include screen("desktop") {
         .pad {
-            width: 20em;
+            width: 25vw;
+        }
+
+        .home-button {
+            height: 6rem;
+            width: 6rem;
         }
     }
 }
 
 
 // TOP BAR STYLES
+$topbar-height: 6.5vh;
 #topbar {
-    height: 8vh;
-    grid-auto-rows: 8vh;
+    height: $topbar-height;
+    grid-auto-rows: $topbar-height;
     width: 100%;
-    background-color: #FF3333;
+    background-color: colors.$red;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -152,13 +162,33 @@ html, body {
     }
 
     .link-container {
-        display: grid;
-        grid-auto-flow: column;
-        justify-items: center;
+        display: none;
     }
+
+    .desktop-only {
+        display: none;
+    }
+
+    @include screen("desktop") {
+        .link-container {
+            display: grid;
+            grid-auto-flow: column;
+            justify-items: center;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        .desktop-only {
+            display: inherit;
+        }
+    }
+
+
     
     .topbar-link {
-        font-size: 200%;
+        font-size: 150%;
         transition: all 0.3s ease-in-out;
         a {
             color: white;
@@ -184,6 +214,52 @@ html, body {
                 visibility: visible;
                 transform: scaleX(1);
             }
+        }
+    }
+
+    #ham {
+        width: 30vw;
+        justify-self: right;
+        color: white;
+
+        .hamburger-box {
+            color: white;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+#menu {
+    transform: translateY(-100vh) translateY(-$topbar-height);
+    position: fixed;
+    top: $topbar-height;
+    height: 100%;
+    width: 100vw;
+    background-color: colors.$red;
+    transition: all 0.5s ease-in-out;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.is-active {
+        transform: translateY(0);
+    }
+
+    .menu-link {
+        width: 100%;
+        text-align: center;
+        margin: 1rem;
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: sol-pro, orbitron, sans-serif;
+            font-weight: bold;
+            font-size: 4rem;
         }
     }
 }
