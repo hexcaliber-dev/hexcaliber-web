@@ -3,7 +3,8 @@
 //  CREATED BY BEN CUAN
 //////////////////////////////////////////
 
-@use '_colors';
+@use '_vars';
+
 $hamburger-layer-color: white;
 @import 'hamburgers/hamburgers.scss';
 
@@ -46,13 +47,14 @@ html, body {
 }
 
 .main {
-    background-color: colors.$background;
-    min-height: 100vh;
-    min-width: 100vw;
-    max-height: 100vh;
-    max-width: 100vw;
+    background-color: vars.$background;
     overflow: hidden;
-    position: absolute;
+    height: 100vh;
+    padding: vars.$topbar-height 0 0 0;
+    // min-width: 100vw;
+    // max-width: 100vw;
+    // position: absolute;
+    
 }
 
 .banner-container {
@@ -140,12 +142,13 @@ html, body {
 
 
 // TOP BAR STYLES
-$topbar-height: 6.5vh;
 #topbar {
-    height: $topbar-height;
-    grid-auto-rows: $topbar-height;
+    position: fixed;
+    top: 0;
+    height: vars.$topbar-height;
+    grid-auto-rows: vars.$topbar-height;
     width: 100%;
-    background-color: colors.$red;
+    background-color: vars.$red;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
@@ -237,12 +240,12 @@ $topbar-height: 6.5vh;
 
 }
 #menu {
-    transform: translateY(-100vh) translateY(-$topbar-height);
+    transform: translateY(-100vh) translateY(-(vars.$topbar-height));
     position: fixed;
-    top: $topbar-height;
+    top: vars.$topbar-height;
     height: 100%;
     width: 100vw;
-    background-color: colors.$red;
+    background-color: vars.$red;
     transition: all 0.5s ease-in-out;
     z-index: 999;
     display: flex;

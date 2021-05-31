@@ -1,13 +1,14 @@
-@use '_colors';
+@use '_vars';
 .banner-text {
     margin-top: 3rem;
     width: 100%;
 }
 
 main {
-    background-color: colors.$background;
+    background-color: vars.$background;
     height: 100%;
     padding-bottom: 8px;
+    padding-top: vars.$topbar-height;
 }
 
 .header {
@@ -32,11 +33,14 @@ main {
     flex-direction: row;
     position: relative;
     width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     img {
-        height: 10%;
-        width: 10%;
+        height: 20%;
+        width: 20%;
         padding: 1rem;
+        box-sizing: border-box;
     }
 
     .team-header {
