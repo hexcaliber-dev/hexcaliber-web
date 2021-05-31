@@ -9,6 +9,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-fontawesome-css",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
