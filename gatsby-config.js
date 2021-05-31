@@ -15,11 +15,19 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Odibee Sans\:300,400,700`,
+          `coda\:300,700`,
           `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        typekit: {
+          id: 'jko3pho',
+        },
+      },
     },
     {
       resolve: "gatsby-source-filesystem",

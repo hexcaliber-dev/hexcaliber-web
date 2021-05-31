@@ -4,18 +4,21 @@ import "../sass/main.scss"
 import logo from "../images/icon.png";
 
 const links = [
-    "About"
+    "About", "Games", "Contact"
 ]
 
 function Topbar(selected) {
     return (
         <div id="topbar">
-            <img src={logo} id="home-img" />
-            {links.map(btn =>
-                <div className="topbar-link">
-                    <a href={"/" + btn.toLowerCase()}>{btn}</a>
-                </div> 
-            )}
+            <img src={logo} id="home-img" onClick={() => window.location.href = "/"} />
+            <div class="pad" />
+            <div class="link-container">
+                {links.map(btn =>
+                    <div className="topbar-link">
+                        <a href={"/" + btn.toLowerCase()}>{btn}</a>
+                    </div> 
+                )}
+            </div>
         </div>
     );
   }

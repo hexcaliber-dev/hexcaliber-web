@@ -35,8 +35,9 @@ const buttons = [
 const IndexPage = () => {
   return (
     <main className="main">
+      {/* <link rel="stylesheet" href="https://use.typekit.net/jko3pho.css"></link> */}
       <SEO />
-      {/* <Topbar /> */}
+      <Topbar />
       <div className="banner-container">
         <img className="banner-logo" src={bannerLogo} alt="Hexcaliber banner" />
         <img className="banner-text" src={bannerText} alt="Hexcaliber banner text" />
