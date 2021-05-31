@@ -21,22 +21,37 @@ html, body {
     justify-items: center;
     
     .banner-logo, .banner-text {
-        height: 70%;
+        height: 65%;
         max-width: 100%;
         justify-content: center;
         object-fit: contain;
     }
 
-    .banner-logo {
-        align-self: end;
-
-        &:hover {
+    &:hover {
+        .banner-logo {
             animation: spinny 3s ease-in-out 0s infinite;
         }
+
+        .banner-text {
+            animation: banner 1.5s ease-in-out 0s infinite;
+        }
+    }
+
+    .banner-logo {
+        align-self: end;
+        max-width: 30vw;
+
+        // &:hover {
+            
+        // }
     }
 
     .banner-text {
         align-self: start;
+
+        // &:hover {
+            
+        // }
     }
 }
 
@@ -46,12 +61,11 @@ html, body {
     justify-items: center;
     grid-auto-flow: column;
 
-
     .home-button {
         border: solid white 3px;
         border-radius: 50%;
-        height: 4rem;
-        width: 4rem;
+        height: 4.5rem;
+        width: 4.5rem;
         transition: all 0.25s ease-out;
         background-color: transparent;
         color: white;
@@ -107,5 +121,13 @@ html, body {
 
     100% {
         transform: rotate(1440deg);
+    }
+}
+
+@keyframes banner {
+    50% {
+        // filter: invert(70%) hue-rotate(90deg) brightness(1.5);
+        transform: scale(1.02);
+
     }
 }
