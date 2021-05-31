@@ -215,6 +215,10 @@ $topbar-height: 6.5vh;
                 transform: scaleX(1);
             }
         }
+
+        &.selected {
+            text-decoration: underline white solid;
+        }
     }
 
     #ham {
@@ -287,3 +291,10 @@ $topbar-height: 6.5vh;
     }
 }
 
+
+@include screen('desktop') {
+    .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

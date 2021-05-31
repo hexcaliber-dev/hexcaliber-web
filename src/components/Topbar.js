@@ -5,7 +5,7 @@ import logo from "../images/icon.png";
 
 const links = ["About", "Games", "Contact"];
 
-function Topbar(selected) {
+function Topbar(props) {
 	const toggleMenu = () => {
 		let ham = document.getElementById("ham");
 		let menu = document.getElementById("menu");
@@ -30,7 +30,7 @@ function Topbar(selected) {
 				<div className="pad desktop-only" />
 				<div className="link-container">
 					{links.map((btn) => (
-						<div className="topbar-link">
+						<div className={(props.selected === btn) ? "topbar-link selected" : "topbar-link"}>
 							<a href={"/" + btn.toLowerCase()}>{btn}</a>
 						</div>
 					))}
@@ -52,7 +52,7 @@ function Topbar(selected) {
 						<a href={"/"}>Home</a>
 					</div>
 				{links.map((btn) => (
-					<div className="menu-link">
+					<div className={(props.selected === btn) ? "menu-link selected" : "menu-link"}>
 						<a href={"/" + btn.toLowerCase()}>{btn}</a>
 					</div>
 				))}
