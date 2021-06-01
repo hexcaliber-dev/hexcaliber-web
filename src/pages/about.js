@@ -1,11 +1,6 @@
 import * as React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faInstagram,
-	faItchIo,
-    faFacebook,
-} from "@fortawesome/free-brands-svg-icons";
+
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 // import { faMail} from '@fortawesome/free-solid-svg-icons'
 import SEO from "../components/SEO";
@@ -14,6 +9,8 @@ import "../sass/about.scss";
 import bannerLogo from "../images/icon.png";
 import bannerText from "../images/banner-text.png";
 import Topbar from "../components/Topbar";
+import TEAM from "../data/team";
+import TeamMember from "../components/TeamMember";
 
 const AboutPage = () => {
 	return (
@@ -55,26 +52,9 @@ const AboutPage = () => {
 					Vestibulum et sapien magna.
 				</p>
                 <div class="header">Team</div>
-                <div className="team-container">
-                    <img src={bannerLogo} alt="Team Member" />
-                    <div className="team-content">
-                        <div className="team-header">
-                            <div className="team-name">Shelldon</div>
-                            <button type="button" text="test" className="team-button" onClick={() => window.open('', '_blank').focus()}><FontAwesomeIcon icon={faFacebook} size="2x" /></button>
-                        </div>
-                        <p className="text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Curabitur ut bibendum neque. Aenean mattis hendrerit rutrum.
-                            Morbi lacinia purus est, a consectetur ante sodales vel. Maecenas
-                            varius nisi sem, eu venenatis tellus volutpat vitae. Quisque quis
-                            nibh condimentum neque dictum porta vitae porta eros. Sed ac
-                            aliquet mauris, eget semper elit. Vestibulum ante ipsum primis in
-                            faucibus orci luctus et ultrices posuere cubilia curae; Morbi
-                            convallis metus sed nulla bibendum maximus. Ut eget velit quis
-                            sapien laoreet consequat.
-                        </p>
-                    </div>
-                </div>
+                {TEAM.map((member) =>
+                    <TeamMember member={member} />
+                )};
 			</div>
 		</main>
 	);

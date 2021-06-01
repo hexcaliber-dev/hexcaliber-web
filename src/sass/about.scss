@@ -1,4 +1,5 @@
 @use '_vars';
+@use '_mixins';
 .banner-text {
     margin-top: 3rem;
     width: 100%;
@@ -29,18 +30,20 @@ main {
 }
 
 .team-container {
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
-    width: 100%;
+    width: 95%;
     padding-top: 3rem;
     padding-bottom: 3rem;
 
     img {
         height: 20%;
         width: 20%;
-        padding: 1rem;
+        padding: 2.5rem;
         box-sizing: border-box;
+        border-radius: 50%;
     }
 
     .team-header {
@@ -65,12 +68,21 @@ main {
         width: 3rem;
         background-color: transparent;
         transition: all 0.3s ease-in-out;
+        margin-right: 2rem;
 
         &:hover {
             background-color: white;
             color: black;
             transform: scale(1.1);
             cursor: pointer;
+        }
+    }
+
+    @include mixins.screen('desktop') {
+        flex-direction: row;
+
+        .team-header {
+            flex-direction: row;
         }
     }
 }
