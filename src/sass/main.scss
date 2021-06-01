@@ -253,6 +253,7 @@ html, body {
     color: white;
     font-size: 130%;
     font-family: vars.$content-fonts;
+    text-align: left;
 }
 
 @keyframes spinny {
@@ -279,6 +280,10 @@ html, body {
 }
 
 
+.container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
 @include mixins.screen('desktop') {
     .container {
         padding-left: 10%;

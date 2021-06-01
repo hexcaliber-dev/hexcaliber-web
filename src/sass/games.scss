@@ -20,19 +20,31 @@ main {
     width: 95%;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    padding-left: 2.5%;
 
     img {
-        height: 45%;
+        height: 100%;
+        width: 100%;
+    }
+
+    @include mixins.screen('desktop') {
+        img {
+            height: 45%;
         width: 45%;
         padding: 1.5rem;
         box-sizing: border-box;
-    }
+        }
 
+        .game-header {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    
     .game-header {
-        display: flex;
-        flex-direction: row;
         padding-top: 1.5rem;
     }
+    
 
     .game-name {
         color: white;
