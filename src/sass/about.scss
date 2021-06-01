@@ -12,23 +12,6 @@ main {
     padding-top: vars.$topbar-height;
 }
 
-.header {
-    margin-top: 3rem;
-    width: 100%;
-    text-align: center;
-    font-family: sol-pro, orbitron, sans-serif;
-    font-size: 4rem;
-    font-weight: bolder;
-    color: white;
-    text-decoration: underline white solid;
-}
-
-.text {
-    color: white;
-    font-size: 130%;
-    font-family: franklin-gothic-urw, sans-serif;
-}
-
 .team-container {
 
     display: flex;
@@ -54,7 +37,7 @@ main {
     .team-name {
         color: white;
         font-size: 250%;
-        font-family: sol-pro, orbitron, sans-serif;
+        font-family: vars.$header-fonts;
         margin-right: 3rem;
     }
 
