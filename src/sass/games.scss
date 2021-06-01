@@ -1,0 +1,97 @@
+@use '_vars';
+@use '_mixins';
+.banner-text {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+main {
+    background-color: vars.$background;
+    height: 100%;
+    padding-bottom: 8px;
+    padding-top: vars.$topbar-height;
+}
+
+.game-container {
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 95%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    img {
+        height: 45%;
+        width: 45%;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .game-header {
+        display: flex;
+        flex-direction: row;
+        padding-top: 1.5rem;
+    }
+
+    .game-name {
+        color: white;
+        font-size: 300%;
+        font-family: vars.$header-fonts;
+        margin-right: 3rem;
+        font-weight: bold;
+    }
+
+    .game-button {
+        border-radius: 50%;
+        outline: none;
+        background-color: none;
+        border: solid white 3px;
+        color: white;
+        height: 3rem;
+        width: 3rem;
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+        margin-right: 2rem;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    .hover-text {
+        display: none;
+    }
+
+    @include mixins.screen('desktop') {
+        .play-button:hover {
+            width: 12rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+    
+            .hover-text {
+                text-align: right;
+                display: block;
+                font-size: 125%;
+                font-weight: bold;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    @include mixins.screen('desktop') {
+        flex-direction: row;
+
+        .game-header {
+            flex-direction: row;
+        }
+    }
+}

@@ -5,13 +5,9 @@ import "../sass/about.scss";
 import { faTwitter, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { StaticImage } from "gatsby-plugin-image";
-
-const links = ["About", "Games", "Contact"];
 
 function TeamMember(props) {
     const member = props.member;
-    console.log(props);
     const icons = {
         website: faGlobe,
         twitter: faTwitter,
@@ -20,7 +16,7 @@ function TeamMember(props) {
     }
 	return (
 		<div className="team-container">
-			<img src={'team/' + member.photo} alt={member.name} />
+			<img src={member.photo} alt={member.name} />
 			<div className="team-content">
 				<div className="team-header">
 					<div className="team-name">{member.name}</div>
