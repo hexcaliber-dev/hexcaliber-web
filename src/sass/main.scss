@@ -121,6 +121,7 @@ html, body {
     align-items: center;
     font-family: vars.$header-fonts;
     font-weight: bold;
+    z-index: 999;
     
     #home-img {
         height: 70%;
