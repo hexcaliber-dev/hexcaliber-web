@@ -49,6 +49,18 @@ const TEAM = [
 		I also helped design the gameplay loops for Bullet Heaven, It's Rude To Point, and Bullet Sanctum. \
 		Besides game development, my hobbies include graphic design, writing stories, and simping for VTubers. \
 		Outside of Hexcaliber, I'm a CS major at San Jose State University, and I don't go outside nearly enough.",
+	},
+	{
+		name: "Akhilan Ganesh",
+		photo: "akhilanganesh.jpg",
+		links: {
+			website: "https://www.linkedin.com/in/akhilan-ganesh-0671031b4/",
+			github: "https://github.com/akhilanganesh",
+		},
+		favGames: "Dead by Daylight, Hollow Knight, Legend of Zelda: Skyward Sword",
+		bio: "Hey! I'm Akhil. I'm a programmer and game designer for Hexcaliber. Most recently, I worked \
+		on games C:\\ONVERGENCE, Eggmageddon, and Soul Snatcher. I am pursuing a Computer Science degree \
+		at the University of San Diego, and aspiring to be a software engineer. Outside of doing work and gaming, I read and draw.",
 	}
 ];
 
