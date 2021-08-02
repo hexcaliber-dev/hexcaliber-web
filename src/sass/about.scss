@@ -52,6 +52,7 @@ main {
 
         .team-name {
             margin-right: 3rem;
+            align-self: flex-end;
         }
     }
 
@@ -81,6 +82,18 @@ main {
 
         .team-header {
             flex-direction: row;
+        }
+    }
+
+    .username {
+        margin-bottom: 0;
+        font-family: vars.$header-fonts;
+        font-size: 150%;
+    }
+
+    @include mixins.screen('not-desktop') {
+        .username {
+            text-align: center;
         }
     }
 }

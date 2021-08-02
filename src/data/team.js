@@ -1,6 +1,7 @@
 /**
  * Contains data for all team members.
  * name: full name
+ * username: your online id
  * photo: photo: location of image (relative to static/about/)
  * links: {
  *     (website/github/twitter/instagram): url to navigate to
@@ -12,6 +13,7 @@
 const TEAM = [
 	{
 		name: "Ben Cuan",
+		username: "64bitpandas",
 		photo: "bencuan.png",
 		links: {
 			website: "https://bencuan.me",
@@ -24,7 +26,8 @@ const TEAM = [
              Outside of Hexcaliber, I'm a CS/Psych major at UC Berkeley who enjoys getting nuked by Gandhi while trying to build camel archers.",
 	},
 	{
-		name: "Omar Hossain (Epicrider/Static Savior)",
+		name: "Omar Hossain",
+		username: "Epicrider/Static Savior",
 		photo: "omarhossain.jpg",
 		links: {
 			website: "https://omarhossain.me",
@@ -37,7 +40,8 @@ const TEAM = [
 		I'm majoring in CS at UC Irvine where I'm the only student refusing to go ZOT ZOT every 5 minutes.",
 	},
 	{
-		name: "Kevin Chu (xKindredKinesis/XenSigilMedia)",
+		name: "Kevin Chu",
+		username: "xKindredKinesis/XenSigilMedia",
 		photo: "Xen Sigil Media - Icon.png",
 		links: {
 			website: "https://xkindredkinesis.itch.io/",

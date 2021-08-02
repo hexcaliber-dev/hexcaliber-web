@@ -31,7 +31,9 @@ function TeamMember(props) {
 							</button>
 						</a>
 					))}
+					
 				</div>
+				{(member.username) ? <div className="text username">&lt;{member.username}&gt;</div> : ""}
 				<p className="text">
 					{member.bio}
 				</p>
