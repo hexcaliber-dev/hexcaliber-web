@@ -13,24 +13,26 @@ function Game(props) {
 			<div className="game-content">
 				<div className="game-header">
 					<div className="game-name">{game.name}</div>
-					<button
-						type="button"
-						text="Play game"
-						className="play-button game-button"
-						onClick={() => window.open(props.link, "_blank").focus()}
-					>
-						<FontAwesomeIcon icon={faItchIo} size="2x" />
-						<div className="hover-text">Play on Itch.io</div>
-					</button>
-					<button
-						type="button"
-						text="Play game"
-						className="game-button play-button"
-						onClick={() => window.open(game.github, "_blank").focus()}
-					>
-						<FontAwesomeIcon icon={faGithub} size="2x" />
-						<div className="hover-text">View the Source</div>
-					</button>
+					<a href={props.link} target="_blank" class="btn-a">
+						<button
+							type="button"
+							text="Play game"
+							className="play-button game-button"
+						>
+							<FontAwesomeIcon icon={faItchIo} size="2x" />
+							<div className="hover-text">Play on Itch.io</div>
+						</button>
+					</a>
+					<a href={game.github} target="_blank" class="btn-a">
+						<button
+							type="button"
+							text="Play game"
+							className="game-button play-button"
+						>
+							<FontAwesomeIcon icon={faGithub} size="2x" />
+							<div className="hover-text">View the Source</div>
+						</button>
+					</a>
 				</div>
 
 				{game.description.map((paragraph) => (

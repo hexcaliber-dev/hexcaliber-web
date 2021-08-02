@@ -1,7 +1,7 @@
 /**
  * Contains data for all team members.
  * name: full name
- * photo: location of image (relative to static/team/)
+ * photo: photo: location of image (relative to static/about/)
  * links: {
  *     (website/github/twitter/instagram): url to navigate to
  *      ...

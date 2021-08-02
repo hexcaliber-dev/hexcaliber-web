@@ -45,7 +45,9 @@ const IndexPage = () => {
       <div className="button-container">
           <div className="pad" />
           {buttons.map(btn => (
-            <button type="button" text={btn.name} className="home-button" onClick={() => window.open(btn.link, '_blank').focus()}><FontAwesomeIcon icon={btn.logo} size="3x" /></button>
+            <a href={btn.link} target="_blank">
+              <button type="button" text={btn.name} className="home-button"><FontAwesomeIcon icon={btn.logo} size="3x" /></button>
+            </a>
           ))}
           <div className="pad" />
       </div>

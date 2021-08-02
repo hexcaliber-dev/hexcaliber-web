@@ -21,14 +21,15 @@ function TeamMember(props) {
 				<div className="team-header">
 					<div className="team-name">{member.name}</div>
 					{Object.keys(member.links).map((key) => (
-						<button
-							type="button"
-							text="test"
-							className="team-button"
-							onClick={() => window.open(member.links[key], "_blank").focus()}
-						>
-							<FontAwesomeIcon icon={icons[key]} size="2x" />
-						</button>
+						<a href={member.links[key]} target="_blank">
+							<button
+								type="button"
+								text="test"
+								className="team-button"
+							>
+								<FontAwesomeIcon icon={icons[key]} size="2x" />
+							</button>
+						</a>
 					))}
 				</div>
 				<p className="text">

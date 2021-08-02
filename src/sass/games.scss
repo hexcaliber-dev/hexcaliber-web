@@ -54,6 +54,10 @@ main {
         font-weight: bold;
     }
 
+    .btn-a {
+        text-decoration: none;
+    }
+
     .game-button {
         border-radius: 50%;
         outline: none;
@@ -76,6 +80,7 @@ main {
 
     .hover-text {
         display: none;
+        text-decoration: none;
     }
 
     @include mixins.screen('desktop') {
