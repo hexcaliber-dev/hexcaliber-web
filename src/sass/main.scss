@@ -16,12 +16,11 @@ html, body {
 .main {
     background-color: vars.$background;
     overflow: hidden;
-    height: 100vh;
+    max-height: 100vh - vars.$topbar-height !important;
     padding: vars.$topbar-height 0 0 0;
     // min-width: 100vw;
     // max-width: 100vw;
-    // position: absolute;
-    
+    position: fixed;
 }
 
 .banner-container {
