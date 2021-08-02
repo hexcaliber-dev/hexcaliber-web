@@ -91,9 +91,16 @@ main {
         font-size: 150%;
     }
 
-    @include mixins.screen('not-desktop') {
-        .username {
-            text-align: center;
-        }
+}
+@include mixins.screen('not-desktop') {
+    .username {
+        text-align: center;
+    }
+}
+@include mixins.screen('desktop') {
+    .about-text {
+        padding-left: calc(50vw - 800px);
+        padding-right: calc(50vw - 800px);
+        
     }
 }

@@ -29,27 +29,12 @@ const AboutPage = () => {
 					alt="Hexcaliber banner text"
 				/>
 				<div class="header">About Us</div>
-				<p className="text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Curabitur ut bibendum neque. Aenean mattis hendrerit rutrum.
-					Morbi lacinia purus est, a consectetur ante sodales vel. Maecenas
-					varius nisi sem, eu venenatis tellus volutpat vitae. Quisque quis
-					nibh condimentum neque dictum porta vitae porta eros. Sed ac
-					aliquet mauris, eget semper elit. Vestibulum ante ipsum primis in
-					faucibus orci luctus et ultrices posuere cubilia curae; Morbi
-					convallis metus sed nulla bibendum maximus. Ut eget velit quis
-					sapien laoreet consequat. Nam ac odio non felis pulvinar
-					accumsan. Donec vehicula tincidunt felis non venenatis. Morbi
-					egestas maximus arcu ac dignissim. In bibendum nec sem sed
-					volutpat. Ut at nisl eu quam cursus varius quis quis orci.
-					Suspendisse tempus augue id tristique facilisis. Ut id pretium
-					dolor. Quisque nec accumsan quam. Duis blandit arcu a sapien
-					semper pellentesque. Fusce ultrices lacinia fringilla. Nulla
-					pulvinar finibus faucibus. Nam imperdiet mauris vitae arcu
-					laoreet semper. Fusce vulputate tincidunt congue. Vivamus id
-					dictum odio. Suspendisse suscipit metus et odio rhoncus mattis
-					auctor finibus odio. Donec pretium luctus velit eu malesuada.
-					Vestibulum et sapien magna.
+				<p className="text about-text">
+					Hi there! We're a small indie game studio based in Cupertino, CA. 
+					We enjoy experimenting with games of all different genres, whether it be 
+					metroidvanias, shoot-em-ups, puzzle games, arcade games, or rhythm action. 
+					<br/><br/>
+					We don't have much more to say for the time being, but we hope you enjoy playing our games!
 				</p>
                 <div class="header">Team</div>
                 {TEAM.map((member) =>

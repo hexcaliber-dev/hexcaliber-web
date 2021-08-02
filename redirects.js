@@ -20,7 +20,7 @@ const REDIRECTS = [
     new: "https://xkindredkinesis.itch.io/convergence",
   },
   {
-    old: "/itsrudetopoint",
+    old: "/irtp",
     new: "https://64bitpandas.itch.io/its-rude-to-point",
   },
 ];
